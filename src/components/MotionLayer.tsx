@@ -20,7 +20,6 @@ export default function MotionLayer() {
             .forEach((el) =>
               gsap.from(el, {
                 y: 24,
-                opacity: 0.45,
                 duration: 0.85,
                 ease: "power2.out",
                 scrollTrigger: { trigger: el, start: "top 91%", once: true },
@@ -41,7 +40,6 @@ export default function MotionLayer() {
             .forEach((el) =>
               gsap.from(el, {
                 y: 20,
-                opacity: 0.35,
                 duration: 0.75,
                 ease: "power2.out",
                 scrollTrigger: { trigger: el, start: "top 88%", once: true },
@@ -61,3 +59,5 @@ export default function MotionLayer() {
   }, []);
   return null;
 }
+
+
