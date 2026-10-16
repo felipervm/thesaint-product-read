@@ -1304,3 +1304,5 @@ button:focus-visible,
 
 
 .collab-section .aside, .collab-section .small-muted, .collab-section .source { color: #595751; }
+
+.collab-section .section-label .aside { opacity: 1; }
