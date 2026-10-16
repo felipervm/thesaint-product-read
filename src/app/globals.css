@@ -2,7 +2,7 @@
 @theme {
   --color-carbon: #090908;
   --color-bone: #e8e2d8;
-  --color-signal: #cedf92;
+  --color-signal: #c9bba9;
   --font-sans: Arial, Helvetica, sans-serif;
 }
 :root {
@@ -14,7 +14,9 @@
   --bone: #e8e2d8;
   --white: #f3f1ec;
   --dust: #c9bba9;
-  --signal: #cedf92;
+  --signal: #c9bba9;
+  --oxide: #684a3b;
+  --umber: #3a2d27;
   --gutter: 6vw;
 }
 * {
@@ -305,7 +307,7 @@ button:focus-visible,
   font-size: 17px;
   max-width: 410px;
   line-height: 1.5;
-  color: #c8c8c1;
+  color: var(--silver);
 }
 .fit-explorer {
   display: grid;
@@ -315,7 +317,7 @@ button:focus-visible,
 }
 .fit-visual {
   position: relative;
-  background: #242420;
+  background: var(--graphite);
   aspect-ratio: 4/4.6;
   overflow: hidden;
 }
@@ -374,7 +376,7 @@ button:focus-visible,
 .fit-description > p {
   font-size: 15px;
   max-width: 380px;
-  color: #c8c8c1;
+  color: var(--silver);
 }
 .fit-description .source {
   margin-top: 12px;
@@ -475,9 +477,7 @@ button:focus-visible,
 .brazil-section {
   position: relative;
   isolation: isolate;
-  background:
-    radial-gradient(ellipse at 95% 70%, #cedf9208, transparent 42%),
-    var(--black);
+  background: var(--black);
 }
 .brazil-section > h2 {
   font-size: clamp(50px, 6.3vw, 96px);
@@ -490,7 +490,7 @@ button:focus-visible,
 }
 .story .photo {
   aspect-ratio: 4/4.4;
-  background: #242421;
+  background: var(--graphite);
 }
 .story img {
   object-position: center 20%;
@@ -513,7 +513,7 @@ button:focus-visible,
 .story-copy > p:not(.eyebrow) {
   font-size: 15px;
   line-height: 1.5;
-  color: #c8c8c1;
+  color: var(--silver);
   max-width: 460px;
 }
 .story-copy .story-read {
@@ -547,7 +547,7 @@ button:focus-visible,
 }
 .global-grid .photo {
   height: 260px;
-  background: #22221e;
+  background: var(--graphite);
 }
 .global-grid img {
   object-position: center 20%;
@@ -584,7 +584,7 @@ button:focus-visible,
 }
 .ftx-section {
   position: relative;
-  background: radial-gradient(ellipse at 15% 50%, #cedf9210, transparent 60%);
+  background: var(--umber);
 }
 .footwear {
   display: grid;
@@ -595,7 +595,7 @@ button:focus-visible,
 .shoe-image {
   position: relative;
   aspect-ratio: 1;
-  background: #171814;
+  background: var(--graphite);
   overflow: hidden;
 }
 .shoe-image .photo {
@@ -634,9 +634,9 @@ button:focus-visible,
   min-height: 40px;
 }
 .shoe-tabs button[aria-pressed="true"] {
-  border-color: #cedf9288;
+  border-color: #c9bba988;
   color: var(--signal);
-  background: #cedf920a;
+  background: #c9bba90a;
 }
 .shoe-note {
   min-height: 54px;
@@ -654,7 +654,7 @@ button:focus-visible,
 }
 .question-section {
   border-top: 1px solid #706e6933;
-  background: radial-gradient(ellipse at 75% 4%, #cedf9208, transparent 35%);
+  background: var(--carbon);
 }
 .question-intro {
   margin-bottom: 55px;
@@ -1306,3 +1306,8 @@ button:focus-visible,
 .collab-section .aside, .collab-section .small-muted, .collab-section .source { color: #595751; }
 
 .collab-section .section-label .aside { opacity: 1; }
+
+
+.ftx-section .shoe-note, .ftx-section .source, .ftx-section .section-label .aside { color: var(--dust); }
+.collab-section .source:hover { color: var(--oxide); }
+.collab-section :focus-visible { outline-color: var(--oxide); }
